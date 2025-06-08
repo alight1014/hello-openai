@@ -17,7 +17,7 @@ CONFIG = {
             }
         },
     },
-    "api_key": "your_api_key"
+    "api_key": "your-openai-api-key-here"
 }
 
 def chat_with_search(content, config=None):
