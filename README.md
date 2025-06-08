@@ -70,7 +70,7 @@ result = chat_with_search("搜尋最新科技新聞")
 
 # 使用自訂配置
 custom_config = {
-    "model": "gpt-4o",
+    "model": "gpt-4o-search-preview",
     "api_key": "your-key",
     "web_search_options": {...}
 }
@@ -79,13 +79,13 @@ result = chat_with_search("你的問題", custom_config)
 
 ## 配置選項
 
-可以在 `CONFIG` 中調整以下設定：
+可以在 `CONFIG` 中調整以下設定 ([Ref](https://platform.openai.com/docs/guides/tools-web-search?api-mode=chat))：
 
-- `model`: 使用的 GPT 模型
+- `model`: 使用的 GPT 模型，建議使用 `gpt-4o-search-preview` 或 `gpt-4o-mini-search-preview`
 - `web_search_options`: 搜尋參數配置
-  - `search_context_size`: 搜尋上下文大小 (`small`, `medium`, `large`)
+  - `search_context_size`: 搜尋上下文大小 (`low`, `medium`, `high`)
   - `user_location`: 使用者位置設定（影響搜尋結果）
-
+- 請同步確認 OpenAI Platform 的後台是不是有開啟對應的 model ![專案截圖](./images/model_selection.png)
 ## 範例
 
 ```bash
